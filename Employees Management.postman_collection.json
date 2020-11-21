@@ -1,0 +1,719 @@
+{
+	"info": {
+		"_postman_id": "1643db3d-4351-4a97-ae20-e0353857fc60",
+		"name": "Employees Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultant",
+			"item": [
+				{
+					"name": "Create Consultant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"\",\n    \"name\":\"Giacomo\",\n    \"lastName\":\"Bianchetto\",\n    \"password\":\"1234567890\",\n    \"address\":\"via Padova 67 Vigonza\",\n    \"type\":\"IT\",\n    \"active\":\"true\",\n    \"payRate\":\"85.5\",\n    \"workedHours\":\"100\",\n    \"contractExpirationDate\":\"2020-11-20\",\n    \"serviceLevelAgreementInformation\":\"Bla Bla Bla\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/consultant/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"consultant",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Consultant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\",\n    \"name\":\"Giacomo\",\n    \"lastName\":\"Bianchetto\",\n    \"password\":\"1234567890\",\n    \"address\":\"via Padova 67 Vigonza\",\n    \"type\":\"DevOps\",\n    \"active\":\"true\",\n    \"payRate\":\"185.5\",\n    \"workedHours\":\"100000\",\n    \"contractExpirationDate\":\"2030-11-20\",\n    \"serviceLevelAgreementInformation\":\"Secret Stuff\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/consultant/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"consultant",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Consultant By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/consultant/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"consultant",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Consultant By Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/consultant/findbytype?type=DevOps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"consultant",
+								"findbytype"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "DevOps"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Consultant By  Pay Rate And Worked Hours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/consultant/customsearch?payRate=5000&workedHours=300",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"consultant",
+								"customsearch"
+							],
+							"query": [
+								{
+									"key": "payRate",
+									"value": "5000"
+								},
+								{
+									"key": "workedHours",
+									"value": "300"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Consultant By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/consultant/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"consultant",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Consultant By Fullname",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/consultant/deletebyfullname?name=Giacomo&lastName=Bianchetto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"consultant",
+								"deletebyfullname"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Giacomo"
+								},
+								{
+									"key": "lastName",
+									"value": "Bianchetto"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Operation",
+			"item": [
+				{
+					"name": "Create Operation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"\",\n    \"name\":\"Giacomo\",\n    \"lastName\":\"Bianchetto\",\n    \"password\":\"1234567890\",\n    \"address\":\"via Padova 67 Vigonza\",\n    \"type\":\"IT\",\n    \"active\":\"true\",\n    \"workedHours\":\"100\",\n    \"contractExpirationDate\":\"2020-11-20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/operation/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"operation",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Operation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\",\n    \"name\":\"Giacomo\",\n    \"lastName\":\"Bianchetto\",\n    \"password\":\"1234567890\",\n    \"address\":\"via Padova 67 Vigonza\",\n    \"type\":\"DevOps\",\n    \"active\":\"true\",\n    \"workedHours\":\"100000\",\n    \"contractExpirationDate\":\"2030-11-20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/operation/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"operation",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Operation By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/operation/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"operation",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Operation By Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/operation/findbytype?type=DevOps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"operation",
+								"findbytype"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "DevOps"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Operation By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/operation/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"operation",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Operation By Fullname",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/operation/deletebyfullname?name=Giacomo&lastName=Bianchetto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"operation",
+								"deletebyfullname"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Giacomo"
+								},
+								{
+									"key": "lastName",
+									"value": "Bianchetto"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Regular",
+			"item": [
+				{
+					"name": "Create Regular",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"\",\n    \"name\":\"Giacomo\",\n    \"lastName\":\"Bianchetto\",\n    \"password\":\"1234567890\",\n    \"address\":\"via Padova 67 Vigonza\",\n    \"type\":\"IT\",\n    \"active\":\"true\",\n    \"SSN\":\"ABCDEFGHIJK\",\n    \"pensioninformation\":\"Retirement starts 2020-11-20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/regular/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"regular",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Regular",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\",\n    \"name\":\"Giacomo\",\n    \"lastName\":\"Bianchetto\",\n    \"password\":\"1234567890\",\n    \"address\":\"via Padova 67 Vigonza\",\n    \"type\":\"DevOps\",\n    \"active\":\"true\",\n    \"SSN\":\"LMNOPQRSTUVWYZ\",\n    \"pensioninformation\":\"Retirement starts NEVER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/regular/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"regular",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Regular By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/regular/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"regular",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Regular By Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/regular/findbytype?type=DevOps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"regular",
+								"findbytype"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "DevOps"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Regular By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/regular/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"regular",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Regular By Fullname",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/regular/deletebyfullname?name=Giacomo&lastName=Bianchetto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"regular",
+								"deletebyfullname"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Giacomo"
+								},
+								{
+									"key": "lastName",
+									"value": "Bianchetto"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Support Engineer",
+			"item": [
+				{
+					"name": "Create Support Engineer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"\",\n    \"name\":\"Giacomo\",\n    \"lastName\":\"Bianchetto\",\n    \"password\":\"1234567890\",\n    \"address\":\"via Padova 67 Vigonza\",\n    \"type\":\"IT\",\n    \"active\":\"true\",\n    \"category\":\"cat\",\n    \"role\":\"chief\",\n    \"senority\":\"rookie\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/supportengineer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supportengineer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Support Engineer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1\",\n    \"name\":\"Giacomo\",\n    \"lastName\":\"Bianchetto\",\n    \"password\":\"1234567890\",\n    \"address\":\"via Padova 67 Vigonza\",\n    \"type\":\"DevOps\",\n    \"active\":\"true\",\n    \"category\":\"super category\",\n    \"role\":\"commander\",\n    \"senority\":\"pure wisdom\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/supportengineer/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supportengineer",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Support Engineer By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/supportengineer/get/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supportengineer",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Support Engineer By Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/supportengineer/findbytype?type=DevOps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supportengineer",
+								"findbytype"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "DevOps"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Support Engineer By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/supportengineer/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supportengineer",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Support Engineer By Fullname",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/supportengineer/deletebyfullname?name=Giacomo&lastName=Bianchetto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"supportengineer",
+								"deletebyfullname"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Giacomo"
+								},
+								{
+									"key": "lastName",
+									"value": "Bianchetto"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "63705239-b6ac-419b-b3a4-ce7a1d2efc85",
+			"key": "entity",
+			"value": "operation"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
