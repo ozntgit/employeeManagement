@@ -12,7 +12,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.telit.model.Consultant;
 
 @DataJpaTest
-//@AutoConfigureTestDatabase(replace=Replace.NONE) //to use psotgres db
+//@AutoConfigureTestDatabase(replace=Replace.NONE) //to use postgres db
 public class ConsultantRepositoryUnitTest {
 
 	@Autowired
